@@ -2,6 +2,7 @@
 @import "reset";
 @import "variables";
 @import "cryptography";
+@import "mixins";
 
 html {
   font: {
@@ -16,14 +17,20 @@ html {
 }
 
 .hero-container {
+  background: {
+    image: url(../assets/images/hero-bg.png);
+    repeat: no-repeat;
+    size: 100%;
+  }
+  height: 923px;
 }
 
 .main-header {
-  background-color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 30px 278px 0 195px;
+  margin-bottom: 104px;
   &__logo > p {
     font-weight: 700;
     font-size: 24px;
@@ -31,18 +38,373 @@ html {
     letter-spacing: 0.1px;
     color: #252b42;
   }
-  &__hamburger-menu {
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: 79px;
+  }
+  &__menu ul {
+    list-style: none;
+    display: flex;
+    font: {
+      weight: 700;
+      size: 14px;
+    }
+    line-height: 24px;
+    gap: 21px;
+    text-transform: capitalize;
+  }
+  &__menu a {
+    text-decoration: none;
+    color: #737373;
+  }
+  &__login {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+  }
+  &__login a {
+    font: {
+      weight: 700;
+      size: 14px;
+    }
+    line-height: 22px;
+    letter-spacing: 0.2px;
+    color: $mainColor;
+    text: {
+      decoration: none;
+      transform: capitalize;
+    }
+  }
+  &__login button {
+    width: 138px;
+    height: 52px;
+    background-color: $mainColor;
+    border: none;
+    color: #ffffff;
+    letter-spacing: 0.2px;
+    border-radius: 5px;
+    font: {
+      family: inherit;
+      weight: 700;
+      size: 14px;
+    }
+    line-height: 22px;
+    text-transform: uppercase;
+  }
+}
+.hero-text-container {
+  padding-left: 197px;
+  max-width: 650px;
+  & .hero-title {
+    @include font-style(16px, 24px);
+    color: $mainColor;
+    letter-spacing: 0.1px;
+    margin-bottom: 35px;
+  }
+  & .hero-heading {
+    @include font-style(58px, 80px);
+    letter-spacing: 0.2px;
+    color: #252b42;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+  }
+  & .hero-text {
+    @include font-style(20px, 30px);
+    letter-spacing: 0.2px;
+    color: #737373;
+    margin-bottom: 35px;
+  }
+}
+
+.hero-button-container {
+  & .hero-button-left {
+    width: 195px;
+    height: 52px;
+    background-color: $mainColor;
+    border-radius: 5px;
+    border: none;
+    @include font-style(14px, 22px);
+    letter-spacing: 0.2px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-right: 10px;
+  }
+  & .hero-button-right {
+    width: 165px;
+    height: 52px;
+    border: 1px solid $mainColor;
+    border-radius: 5px;
+    @include font-style(14px, 22px);
+    letter-spacing: 0.2px;
+    color: $mainColor;
+    background-color: #ffffff;
+  }
+}
+
+.product-card-container {
+  padding: 0 197px;
+  display: flex;
+  gap: 30px;
+  margin-top: -240px;
+  margin-bottom: 136px;
+  & .product-card {
+    width: 329px;
+    padding: 35px 40px;
+    background-color: #ffffff;
+    box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+    & .logo-container {
+      width: 70px;
+      height: 76px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    & .orange-logo {
+      background-color: $mainColor;
+    }
+    & .blue-logo {
+      background-color: #2435a1;
+    }
+    & .yellow-logo {
+      background-color: #ffc652;
+    }
+    & .product-title {
+      @include font-style(24px, 32px);
+      letter-spacing: 0.1px;
+      color: #252b42;
+      margin-bottom: 20px;
+    }
+    & .product-line {
+      width: 50px;
+      height: 2px;
+      background-color: #e74040;
+      margin-bottom: 20px;
+    }
+    & .product-text {
+      @include font-style(12px, 20px);
+      letter-spacing: 0.2px;
+      color: #737373;
+    }
+  }
+}
+
+.quality-container {
+  height: 761px;
+  padding: 160px 197.5px;
+  display: flex;
+  &__left {
+    margin-right: 157.5px;
+  }
+  &__right {
     display: flex;
     flex-direction: column;
-    gap: 4px;
-    &--line {
-      width: 20px;
-      border: {
-        radius: 4px;
-        width: 2px;
-        style: solid;
-        color: #252b42;
-      }
+    gap: 35px;
+    justify-content: center;
+    & a {
+      text-decoration: none;
     }
+  }
+  &__line {
+    width: 94px;
+    height: 7px;
+    background-color: #e74040;
+  }
+  &__heading {
+    @include font-style(40px, 50px);
+    letter-spacing: 0.2px;
+    color: #252b42;
+  }
+  &__text {
+    @include font-style(14px, 20px);
+    letter-spacing: 0.2px;
+    color: #737373;
+  }
+  &__link-container {
+    display: flex;
+    gap: 10px;
+  }
+  &__link-text {
+    @include font-style(14px, 24px);
+    letter-spacing: 0.2px;
+    color: $mainColor;
+  }
+}
+
+.client-container {
+  display: flex;
+  padding: 80px 191px 80px 195px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.courses {
+  background-color: #26335d;
+  padding: 80px 0 250px 184.5px;
+  display: flex;
+  gap: 30px;
+}
+
+.courses-text-container {
+  background-color: #26335d;
+  padding: 160px 0 0 185px;
+  &__title {
+    @include font-style(14px, 24px);
+    letter-spacing: 0.2px;
+    color: $mainColor;
+    margin-bottom: 10px;
+  }
+  &__heading {
+    @include font-style(40px, 50px);
+    letter-spacing: 0.2px;
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #ffffff;
+    max-width: 469px;
+  }
+}
+
+.course-card {
+  width: 330px;
+  background-color: #ffffff;
+  & .course-card-cover__container {
+    height: 300px;
+    padding: 236px 104px 0 104px;
+    position: relative;
+    &-sale {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 51px;
+      height: 24px;
+      background-color: #e74040;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 3px;
+      @include font-style(14px, 24px);
+      letter-spacing: 0.2px;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  & .cover-left {
+    background-image: url(../assets/images/product-cover-1-.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  & .cover-center {
+    background-image: url(../assets/images/product-cover-2-.png);
+    background-size: 102%;
+    background-repeat: no-repeat;
+  }
+  & .cover-right {
+    background-image: url(../assets/images/product-cover-3-.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  & .course-card-cover__icons-container {
+    display: flex;
+    gap: 10px;
+    & .course-card-cover__icon-container {
+      width: 40px;
+      height: 40px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.course-card-text-container-main {
+  padding: 25px 25px 35px 25px;
+  & .course-card-text-container {
+    &__name-container {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__name {
+      @include font-style(14px, 24px);
+      letter-spacing: 0.2px;
+      color: $mainColor;
+    }
+    &__name-icon-container {
+      width: 50px;
+      height: 26px;
+      background-color: #26335d;
+      border-radius: 20px;
+      display: flex;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.2px;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
+  }
+  & .course-card-text-container__heading {
+    @include font-style(16px, 24px);
+    letter-spacing: 0.1px;
+    color: #252b42;
+    margin-top: 10px;
+  }
+  & .course-card-text-container__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #737373;
+    margin-top: 10px;
+  }
+  & .course-card-text-container__download {
+    display: flex;
+    gap: 10px;
+    @include font-style(14px, 24px);
+    letter-spacing: 0.2px;
+    color: #737373;
+    margin-top: 10px;
+  }
+  & .course-card-text-container__sales {
+    display: flex;
+    gap: 5px;
+    margin-top: 15px;
+    & .course-card-text-container__sales-regular {
+      @include font-style(16px, 24px);
+      letter-spacing: 0.1px;
+      color: #bdbdbd;
+    }
+    & .course-card-text-container__sales-sale {
+      @include font-style(16px, 24px);
+      letter-spacing: 0.1px;
+      color: #2435a1;
+    }
+  }
+  & button {
+    width: 144.14px;
+    height: 44px;
+    border: 1px solid $mainColor;
+    border-radius: 37px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: inherit;
+    @include font-style(14px, 24px);
+    letter-spacing: 0.2px;
+    color: $mainColor;
+    gap: 10px;
+    margin-top: 15px;
   }
 }
