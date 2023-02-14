@@ -2,3 +2,47 @@
 @import "reset";
 @import "variables";
 @import "cryptography";
+
+html {
+  font: {
+    family: $mainFont;
+    size: 62.5%;
+  }
+}
+
+.main-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.hero-container {
+}
+
+.main-header {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  &__logo > p {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.1px;
+    color: #252b42;
+  }
+  &__hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    &--line {
+      width: 20px;
+      border: {
+        radius: 4px;
+        width: 2px;
+        style: solid;
+        color: #252b42;
+      }
+    }
+  }
+}
