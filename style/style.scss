@@ -556,3 +556,27 @@ html {
     align-items: center;
   }
 }
+
+.section-container {
+  padding: 160px 198px 80px 198px;
+  &__title {
+    @include font-style(14px, 24px);
+    letter-spacing: 0.2px;
+    color: $mainColor;
+  }
+  &__heading {
+    @include font-style(40px, 50px);
+    letter-spacing: 0.2px;
+    color: #252b42;
+    margin-top: 10px;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #737373;
+    margin-top: 10px;
+    width: 463px;
+  }
+}
