@@ -272,55 +272,59 @@ html {
   }
 }
 
-.course-card {
-  width: 330px;
-  background-color: #ffffff;
-  & .course-card-cover__container {
-    height: 300px;
-    padding: 236px 104px 0 104px;
-    position: relative;
-    &-sale {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      width: 51px;
-      height: 24px;
-      background-color: #e74040;
-      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-      border-radius: 3px;
-      @include font-style(14px, 24px);
-      letter-spacing: 0.2px;
-      color: #ffffff;
-      display: flex;
-      justify-content: center;
+.courses {
+  display: flex;
+  flex-wrap: wrap;
+  .course-card {
+    width: 330px;
+    background-color: #ffffff;
+    & .course-card-cover__container {
+      height: 300px;
+      padding: 236px 104px 0 104px;
+      position: relative;
+      &-sale {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 51px;
+        height: 24px;
+        background-color: #e74040;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 3px;
+        @include font-style(14px, 24px);
+        letter-spacing: 0.2px;
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+      }
     }
-  }
-  & .cover-left {
-    background-image: url(../assets/images/product-cover-1-.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-  }
-  & .cover-center {
-    background-image: url(../assets/images/product-cover-2-.png);
-    background-size: 102%;
-    background-repeat: no-repeat;
-  }
-  & .cover-right {
-    background-image: url(../assets/images/product-cover-3-.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-  }
-  & .course-card-cover__icons-container {
-    display: flex;
-    gap: 10px;
-    & .course-card-cover__icon-container {
-      width: 40px;
-      height: 40px;
-      background-color: #ffffff;
-      border-radius: 50%;
+    & .cover-left {
+      background-image: url(../assets/images/product-cover-1-.png);
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+    & .cover-center {
+      background-image: url(../assets/images/product-cover-2-.png);
+      background-size: 102%;
+      background-repeat: no-repeat;
+    }
+    & .cover-right {
+      background-image: url(../assets/images/product-cover-3-.png);
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+    & .course-card-cover__icons-container {
       display: flex;
-      justify-content: center;
-      align-items: center;
+      gap: 10px;
+      & .course-card-cover__icon-container {
+        width: 40px;
+        height: 40px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     }
   }
 }
@@ -406,5 +410,149 @@ html {
     color: $mainColor;
     gap: 10px;
     margin-top: 15px;
+  }
+}
+
+.watch-container {
+  padding: 160px 198px 80px;
+  &__title {
+    @include font-style(14px, 24px);
+    letter-spacing: 0.2px;
+    color: $mainColor;
+  }
+  &__heading {
+    @include font-style(24px, 32px);
+    letter-spacing: 0.1px;
+    color: #252b42;
+    margin-top: 10px;
+  }
+  &__text {
+    @include font-style(14px, 20px);
+    letter-spacing: 0.2px;
+    color: #737373;
+    margin-top: 10px;
+    max-width: 469px;
+  }
+}
+
+.price-container {
+  padding: 0 195px 160px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.price-card {
+  position: relative;
+  width: 328px;
+  padding: 50px 40px;
+  &__heart-container {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background-color: $mainColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0px 13px 19px rgba(0, 0, 0, 0.07));
+  }
+  &__free-text {
+    @include font-style(24px, 32px);
+    letter-spacing: 0.1px;
+    color: #252b42;
+    text-transform: uppercase;
+    margin-top: 35px;
+  }
+  &__title {
+    @include font-style(14px, 24px);
+    letter-spacing: 0.2px;
+    color: #737373;
+    margin-top: 35px;
+    width: 220px;
+  }
+  &__price {
+    @include font-style(40px, 50px);
+    letter-spacing: 0.2px;
+    color: $mainColor;
+    margin-top: 35px;
+  }
+  &__price-title {
+    @include font-style(14px, 24px);
+    letter-spacing: 0.2px;
+    color: #8ec2f2;
+    margin-top: 10px;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #737373;
+    margin-top: 35px;
+  }
+  &__button {
+    width: 243px;
+    height: 52px;
+    background-color: $mainColor;
+    border-radius: 5px;
+    border: none;
+    font-family: inherit;
+    @include font-style(14px, 22px);
+    letter-spacing: 0.2px;
+    color: #ffffff;
+    margin-top: 50px;
+  }
+
+  &__internal-container {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  &__component-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    &--check-container-green {
+      width: 32px;
+      height: 32px;
+      background: #2dc071;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    & > p {
+      @include font-style(14px, 24px);
+      letter-spacing: 0.2px;
+      color: #252b42;
+    }
+    &--check-container-gray {
+      width: 32px;
+      height: 32px;
+      background: #bdbdbd;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    & .gray-up {
+      align-self: flex-start;
+    }
+  }
+  & .new-container {
+    position: absolute;
+    top: 0;
+    right: 329px;
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
+    background-color: #e77c40;
+    @include font-style(24px, 32px);
+    letter-spacing: 0.1px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

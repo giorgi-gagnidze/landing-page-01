@@ -328,16 +328,23 @@ html {
   max-width: 469px;
 }
 
-.course-card {
+.courses {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.courses .course-card {
   width: 330px;
   background-color: #ffffff;
 }
-.course-card .course-card-cover__container {
+.courses .course-card .course-card-cover__container {
   height: 300px;
   padding: 236px 104px 0 104px;
   position: relative;
 }
-.course-card .course-card-cover__container-sale {
+.courses .course-card .course-card-cover__container-sale {
   position: absolute;
   top: 20px;
   left: 20px;
@@ -359,28 +366,28 @@ html {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.course-card .cover-left {
+.courses .course-card .cover-left {
   background-image: url(../assets/images/product-cover-1-.png);
   background-size: 100%;
   background-repeat: no-repeat;
 }
-.course-card .cover-center {
+.courses .course-card .cover-center {
   background-image: url(../assets/images/product-cover-2-.png);
   background-size: 102%;
   background-repeat: no-repeat;
 }
-.course-card .cover-right {
+.courses .course-card .cover-right {
   background-image: url(../assets/images/product-cover-3-.png);
   background-size: 100%;
   background-repeat: no-repeat;
 }
-.course-card .course-card-cover__icons-container {
+.courses .course-card .course-card-cover__icons-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
 }
-.course-card .course-card-cover__icons-container .course-card-cover__icon-container {
+.courses .course-card .course-card-cover__icons-container .course-card-cover__icon-container {
   width: 40px;
   height: 40px;
   background-color: #ffffff;
@@ -508,4 +515,205 @@ html {
   color: #ff6551;
   gap: 10px;
   margin-top: 15px;
+}
+
+.watch-container {
+  padding: 160px 198px 80px;
+}
+.watch-container__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #ff6551;
+}
+.watch-container__heading {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+  color: #252b42;
+  margin-top: 10px;
+}
+.watch-container__text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: #737373;
+  margin-top: 10px;
+  max-width: 469px;
+}
+
+.price-container {
+  padding: 0 195px 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.price-card {
+  position: relative;
+  width: 328px;
+  padding: 50px 40px;
+}
+.price-card__heart-container {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background-color: #ff6551;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-filter: drop-shadow(0px 13px 19px rgba(0, 0, 0, 0.07));
+          filter: drop-shadow(0px 13px 19px rgba(0, 0, 0, 0.07));
+}
+.price-card__free-text {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+  color: #252b42;
+  text-transform: uppercase;
+  margin-top: 35px;
+}
+.price-card__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #737373;
+  margin-top: 35px;
+  width: 220px;
+}
+.price-card__price {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  letter-spacing: 0.2px;
+  color: #ff6551;
+  margin-top: 35px;
+}
+.price-card__price-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #8ec2f2;
+  margin-top: 10px;
+}
+.price-card__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: #737373;
+  margin-top: 35px;
+}
+.price-card__button {
+  width: 243px;
+  height: 52px;
+  background-color: #ff6551;
+  border-radius: 5px;
+  border: none;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+  margin-top: 50px;
+}
+.price-card__internal-container {
+  margin-top: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+.price-card__component-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+.price-card__component-container--check-container-green {
+  width: 32px;
+  height: 32px;
+  background: #2dc071;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.price-card__component-container > p {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #252b42;
+}
+.price-card__component-container--check-container-gray {
+  width: 32px;
+  height: 32px;
+  background: #bdbdbd;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.price-card__component-container .gray-up {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+.price-card .new-container {
+  position: absolute;
+  top: 0;
+  right: 329px;
+  width: 90px;
+  height: 90px;
+  border-radius: 45px;
+  background-color: #e77c40;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
